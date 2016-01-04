@@ -14,7 +14,7 @@
 		2A4C58C21C38927600B6B4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4C58C01C38927600B6B4D0 /* LaunchScreen.storyboard */; };
 		2A4C58CD1C38927600B6B4D0 /* BackToBach2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4C58CC1C38927600B6B4D0 /* BackToBach2Tests.swift */; };
 		2A4C58D81C38927600B6B4D0 /* BackToBach2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4C58D71C38927600B6B4D0 /* BackToBach2UITests.swift */; };
-		2A4C58E61C3892FF00B6B4D0 /* killerBs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A4C58E51C3892FF00B6B4D0 /* killerBs.mp3 */; };
+		2A4C58E61C3892FF00B6B4D0 /* Attack of the Killer Bees.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A4C58E51C3892FF00B6B4D0 /* Attack of the Killer Bees.mp3 */; };
 		2A4C58E81C38933400B6B4D0 /* killerBs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A4C58E71C38933400B6B4D0 /* killerBs.jpg */; };
 		2A4C58EA1C38954700B6B4D0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4C58E91C38954700B6B4D0 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,7 @@
 		2A4C58D31C38927600B6B4D0 /* BackToBach2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackToBach2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4C58D71C38927600B6B4D0 /* BackToBach2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToBach2UITests.swift; sourceTree = "<group>"; };
 		2A4C58D91C38927600B6B4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A4C58E51C3892FF00B6B4D0 /* killerBs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = killerBs.mp3; sourceTree = "<group>"; };
+		2A4C58E51C3892FF00B6B4D0 /* Attack of the Killer Bees.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Attack of the Killer Bees.mp3"; sourceTree = "<group>"; };
 		2A4C58E71C38933400B6B4D0 /* killerBs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = killerBs.jpg; sourceTree = "<group>"; };
 		2A4C58E91C38954700B6B4D0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -105,7 +105,7 @@
 		2A4C58B61C38927600B6B4D0 /* BackToBach2 */ = {
 			isa = PBXGroup;
 			children = (
-				2A4C58E51C3892FF00B6B4D0 /* killerBs.mp3 */,
+				2A4C58E51C3892FF00B6B4D0 /* Attack of the Killer Bees.mp3 */,
 				2A4C58E71C38933400B6B4D0 /* killerBs.jpg */,
 				2A4C58B71C38927600B6B4D0 /* AppDelegate.swift */,
 				2A4C58B91C38927600B6B4D0 /* ViewController.swift */,
@@ -242,7 +242,7 @@
 				2A4C58C21C38927600B6B4D0 /* LaunchScreen.storyboard in Resources */,
 				2A4C58BF1C38927600B6B4D0 /* Assets.xcassets in Resources */,
 				2A4C58E81C38933400B6B4D0 /* killerBs.jpg in Resources */,
-				2A4C58E61C3892FF00B6B4D0 /* killerBs.mp3 in Resources */,
+				2A4C58E61C3892FF00B6B4D0 /* Attack of the Killer Bees.mp3 in Resources */,
 				2A4C58BD1C38927600B6B4D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +494,7 @@
 				2A4C58DE1C38927600B6B4D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A4C58DF1C38927600B6B4D0 /* Build configuration list for PBXNativeTarget "BackToBach2Tests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +503,7 @@
 				2A4C58E11C38927600B6B4D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A4C58E21C38927600B6B4D0 /* Build configuration list for PBXNativeTarget "BackToBach2UITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +512,7 @@
 				2A4C58E41C38927600B6B4D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

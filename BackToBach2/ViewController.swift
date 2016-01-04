@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     var timer: NSTimer!
     
     
+    @IBOutlet weak var topNav: UINavigationItem!
+    
     @IBOutlet weak var sliderScrubber: UISlider!
     
     @IBOutlet weak var sliderVolume: UISlider!
@@ -82,8 +84,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.topNav.title = "Attack of the Killer Bees"
         
-        let audioPath = NSBundle.mainBundle().pathForResource("killerBs", ofType: "mp3")
+        
+        let audioPath = NSBundle.mainBundle().pathForResource("Attack of the Killer Bees", ofType: "mp3")
         
         do
         
