@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         startTimer()
     }
     
+    
     @IBAction func pause(sender: AnyObject) {
         if player.playing {
             player.pause()
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
 
     }
     
+    
     @IBAction func stop(sender: AnyObject) {
         player.stop()
         player.currentTime = 0
@@ -44,9 +46,10 @@ class ViewController: UIViewController {
         
     }
     
+    
     @IBAction func scrubSong(sender: AnyObject) {
         
-        player.currentTime = slideSongPosition()
+        player.currentTime = Double(sliderScrubber.value)
         
         if player.playing {
             player.play()
@@ -55,24 +58,18 @@ class ViewController: UIViewController {
         
     }
     
+    
     @IBAction func changeVolume(sender: AnyObject) {
+        
         player.volume = sliderVolume.value
+        
     }
     
 
     func updateScrubSlider(){
         
-        sliderScrubber.value = Float((player.currentTime / player.duration) * 100 )
+        sliderScrubber.value = Float(player.currentTime)
         
-        print(sliderScrubber.value)
-        print(player.currentTime)
-        
-        
-    }
-    
-    func slideSongPosition() -> Double {
-        
-        return (player.duration/100) * Double(sliderScrubber.value)
     }
     
     
@@ -86,18 +83,20 @@ class ViewController: UIViewController {
         
         self.topNav.title = "Attack of the Killer Bees"
         
-        
         let audioPath = NSBundle.mainBundle().pathForResource("Attack of the Killer Bees", ofType: "mp3")
         
         do
         
         {
             try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath!))
+            
+            sliderScrubber.maximumValue = Float(player.duration)
         
         } catch {
+            
             // error stuff here
+            
         }
-        
         
     }
 
@@ -105,7 +104,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
