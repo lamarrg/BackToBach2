@@ -35,7 +35,6 @@ class ViewController: UIViewController {
             timer.invalidate()
         }
 
-
     }
     
     
@@ -52,6 +51,7 @@ class ViewController: UIViewController {
         player.currentTime = Double(sliderScrubber.value)
         
         if player.playing {
+            
             player.play()
         
         }
@@ -69,6 +69,15 @@ class ViewController: UIViewController {
     func updateScrubSlider(){
         
         sliderScrubber.value = Float(player.currentTime)
+        print(player.currentTime)
+        
+        
+        if ((player.currentTime + 1.0) >= player.duration) {
+            
+            timer.invalidate()
+            sliderScrubber.value = 0.0
+        
+        }
         
     }
     
