@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     
     
     func startTimer(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("updateScrubSlider"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: (#selector(ViewController.updateScrubSlider)), userInfo: nil, repeats: true)
     }
     
     
