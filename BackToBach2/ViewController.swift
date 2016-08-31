@@ -40,9 +40,9 @@ class ViewController: UIViewController {
     
     @IBAction func stop(sender: AnyObject) {
         player.stop()
-        player.currentTime = 0
         timer.invalidate()
-        
+        player.currentTime = 0
+        sliderScrubber.value = 0
     }
     
     
