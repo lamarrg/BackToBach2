@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     var player: AVAudioPlayer = AVAudioPlayer()
     var songPosition: Double = 0.0
-    var timer: NSTimer!
+    var timer: Timer!
     
     
     @IBOutlet weak var topNav: UINavigationItem!
@@ -23,14 +23,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderVolume: UISlider!
     
     
-    @IBAction func play(sender: AnyObject) {
+    @IBAction func play(_ sender: AnyObject) {
         player.play()
         startTimer()
     }
     
     
-    @IBAction func pause(sender: AnyObject) {
-        if player.playing {
+    @IBAction func pause(_ sender: AnyObject) {
+        if player.isPlaying {
             player.pause()
             timer.invalidate()
         }
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func stop(sender: AnyObject) {
+    @IBAction func stop(_ sender: AnyObject) {
         player.stop()
         timer.invalidate()
         player.currentTime = 0
@@ -46,11 +46,11 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func scrubSong(sender: AnyObject) {
+    @IBAction func scrubSong(_ sender: AnyObject) {
         
         player.currentTime = Double(sliderScrubber.value)
         
-        if player.playing {
+        if player.isPlaying {
             
             player.play()
         
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func changeVolume(sender: AnyObject) {
+    @IBAction func changeVolume(_ sender: AnyObject) {
         
         player.volume = sliderVolume.value
         
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     
     
     func startTimer(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: (#selector(ViewController.updateScrubSlider)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateScrubSlider)), userInfo: nil, repeats: true)
     }
     
     
@@ -92,12 +92,12 @@ class ViewController: UIViewController {
         
         self.topNav.title = "Attack of the Killer Bees"
         
-        let audioPath = NSBundle.mainBundle().pathForResource("Attack of the Killer Bees", ofType: "mp3")
+        let audioPath = Bundle.main.path(forResource: "Attack of the Killer Bees", ofType: "mp3")
         
         do
         
         {
-            try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath!))
+            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
             
             sliderScrubber.maximumValue = Float(player.duration)
         
